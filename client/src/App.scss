@@ -102,7 +102,6 @@ video {
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 7px 50px rgb(214, 223, 213);
-
   .container {
     height: 85vh;
     width: 60%;
@@ -110,7 +109,6 @@ video {
     justify-content: space-between;
     border-radius: 10px;
     background: hsl(0, 0%, 91%);
-
     .videoDiv {
       display: flex;
       flex-basis: 50%;
@@ -124,30 +122,25 @@ video {
       border-radius: 10px;
       overflow: hidden;
       position: relative;
-
       video,
       .footerDiv {
         position: absolute;
       }
-
       video {
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        object-fit: fill;
         top: 0;
         bottom: 0;
         right: 0;
         left: 0;
       }
-
       .textDiv {
         position: relative;
-
         .title {
           color: var(--whiteColor);
           font-size: 35px;
           font-weight: 800;
-
           &:hover {
             background: var(--hoverColor);
             color: var(--blackColor);
@@ -171,11 +164,9 @@ video {
         backdrop-filter: blur(1px);
         border-radius: 10px;
         color: black;
-
         .text {
           color: var(--whiteColor);
         }
-
         .btn {
           background: var(--whiteColor);
           color: var(--primaryColor);
@@ -183,7 +174,6 @@ video {
           border-radius: 10px;
           font-weight: 400;
           transition: 0.3s ease;
-
           &:hover {
             background: var(--hoverColor);
             color: var(--blackColor);
@@ -198,16 +188,13 @@ video {
       flex-direction: column;
       gap: 0.1rem;
       transform: translateX(-1rem);
-
       .headerDiv {
         text-align: center;
         padding: 1rem 0;
-
         img {
           width: 70px;
           padding-bottom: 0.3rem;
         }
-
         h3 {
           font-size: 25px;
           color: var(--blackColor);
@@ -217,19 +204,16 @@ video {
 
       .form {
         gap: 1.5rem;
-
         .inputDiv {
           .icon {
             color: var(--greyText);
           }
-
           input {
             background: none;
             outline: none;
             border: none;
             width: 200px;
           }
-
           label {
             color: var(--blackColor);
             font-weight: 400;
@@ -237,7 +221,6 @@ video {
             padding: 0.3rem 0;
             display: block;
           }
-
           .input {
             gap: 0.5rem;
             padding: 0.8rem;
@@ -257,16 +240,13 @@ video {
           width: 100%;
           gap: 0.5rem;
           transition: 0.3s ease;
-
           .icon {
             font-size: 25px;
             transition: 0.3s ease;
           }
-
           &:hover {
             background: var(--hoverColor);
             color: var(--blackColor);
-
             .icon {
               color: var(--blackColor);
               transform: translateX(5px);
@@ -279,7 +259,6 @@ video {
           color: var(--blackColor);
           opacity: 0.7;
           text-align: center;
-
           a {
             text-decoration: underline;
             cursor: pointer;
@@ -287,6 +266,157 @@ video {
           }
         }
       }
+    }
+  }
+}
+
+// styled of Dashbord Page
+.dashboard {
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  margin: auto;
+  .dashboardContainer {
+    height: 95%;
+    width: 95%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgb(194, 194, 194);
+  }
+}
+
+// Media Queries ==> Dashboard Page
+
+@media screen and (max-width: 500px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 918px) {
+  .heading {
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+
+// Media Queries of Login and Register Pages
+
+@media screen and (max-width: 602px) {
+  .loginPage,
+  .registerPage {
+    .container {
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      padding: 1.5rem;
+      .videoDiv {
+        width: 100%;
+        .textDiv {
+          .title {
+            font-size: 20px;
+          }
+          p {
+            padding: 1rem;
+          }
+        }
+        .footerDiv {
+          .text {
+            font-size: 12px;
+          }
+          .btn {
+            padding: 0.4rem 1.5rem;
+          }
+        }
+      }
+      .formDiv {
+        gap: 1rem;
+        transform: translateY(-0.5rem);
+        .headerDiv {
+          padding: 1rem 0;
+          img {
+            width: 40px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+        .form {
+          gap: 0.5rem;
+          .inputDiv {
+            input {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 678px) {
+  .loginPage,
+  .registerPage {
+    .container {
+      .videoDiv {
+        .textDiv {
+          .title {
+            font-size: 25px;
+          }
+          p {
+            padding: 1rem;
+          }
+        }
+        .footerDiv {
+          .text {
+            font-size: 12px;
+          }
+          .btn {
+            padding: 0.8rem 1.5rem;
+          }
+        }
+      }
+      .formDiv {
+        transform: translateY(-0.5rem);
+        .headerDiv {
+          padding: 1rem 0;
+          img {
+            width: 40px;
+          }
+          h3 {
+            font-size: 20px;
+          }
+        }
+        .form {
+          gap: 0.5rem;
+          .inputDiv {
+            input {
+              width: 100%;
+              max-width: 200px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 927px) {
+  .loginPage,
+  .registerPage {
+    .container {
+      width: 85%;
     }
   }
 }
